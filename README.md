@@ -47,35 +47,39 @@ Reum-AI-total/
 └── requirements.txt           # Dependencias
 ```
 
-## 🛠️ Instalación
+## 🛠️ Instalación Rápida
 
-### 1. Preparar el Entorno
+### Configuración Automática (Recomendada)
 ```bash
-# Crear entorno virtual
-python -m venv venv
+# 1. Clonar repositorio
+git clone https://github.com/cruzmiguelezdev/Reum-AI-Total.git
+cd Reum-AI-Total
 
-# Activar entorno
-# En Windows:
-venv\\Scripts\\activate
-# En Linux/Mac:
-source venv/bin/activate
+# 2. Ejecutar configuración automática
+python setup.py
 
-# Instalar dependencias
-pip install -r requirements.txt
+# 3. Configurar credenciales en .env
+# Edita el archivo .env con tus credenciales reales
+
+# 4. ¡Listo! Usar el sistema
+python PipelineCompleto.py --menu
 ```
 
-### 2. Configurar Vertex AI
-Crea un archivo `.env` en la raíz del proyecto:
-```env
-VERTEX_AI_PROJECT_ID=tu-project-id
-VERTEX_AI_LOCATION=us-central1
-GEMINI_MODEL_NAME=gemini-1.5-flash-002
+### Instalación Manual
+Si prefieres instalación manual, consulta [`INSTALACION.md`](INSTALACION.md) para instrucciones detalladas.
+
+### Inicio Rápido
+Una vez instalado, usa los scripts de inicio:
+
+**Windows:**
+```bash
+start.bat
 ```
 
-### 3. Estructura de Archivos
-- Coloca PDFs médicos en `pdf_input/`
-- Los prompts del pipeline original van en `Prompts/`
-- El tema para guiones va en `Tema.txt`
+**Linux/Mac:**
+```bash
+./start.sh
+```
 
 ## 🚀 Uso
 
