@@ -53,9 +53,18 @@ generation_config_modificador = GenerationConfig(
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024  # 50MB max file size
 
-# Importar flask_backend original para compatibilidad
+# Importar funciones específicas del flask_backend original sin emojis problemáticos
 try:
-    from flask_backend import *
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("flask_backend_original", os.path.join(BASE_DIR, "flask_backend.py"))
+    if spec and spec.loader:
+        flask_backend_original = importlib.util.module_from_spec(spec)
+        # Solo importar funciones específicas que necesitemos
+        try:
+            spec.loader.exec_module(flask_backend_original)
+        except UnicodeEncodeError:
+            # Ignorar errores de encoding de emojis
+            pass
 except ImportError:
     pass
 

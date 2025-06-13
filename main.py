@@ -9,23 +9,8 @@ import time
 # Importar el backend Flask completo
 from flask_backend_complete import app
 
-# Configurar Flask para servir archivos estáticos
-@app.route('/static/<path:filename>')
-def serve_static(filename):
-    return send_from_directory('static', filename)
-
-@app.route('/')
-def index():
-    """Servir la página principal"""
-    # Cargar el HTML desde archivo
-    html_path = os.path.join(os.path.dirname(__file__), 'templates', 'index.html')
-    
-    if os.path.exists(html_path):
-        with open(html_path, 'r', encoding='utf-8') as f:
-            return f.read()
-    else:
-        # Si no existe el archivo, usar el HTML embebido
-        return render_template_string(EMBEDDED_HTML)
+# Las rutas ya están definidas en flask_backend_complete.py
+# Solo agregamos funcionalidades específicas si es necesario
 
 # HTML embebido como fallback
 EMBEDDED_HTML = """
