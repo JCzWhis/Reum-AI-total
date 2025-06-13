@@ -25,7 +25,7 @@ else:
 
 # Configuración de generación
 generation_config = GenerationConfig(
-    temperature=0.7,
+    temperature=0.9,
     top_p=0.95,
     max_output_tokens=64999,
 )
@@ -90,7 +90,7 @@ def generar_guion_podcast_desde_pdf(pdf_path, estilo_podcast="educativo", duraci
         "educativo": f"""
 Eres un experto en comunicación médica y productor de podcasts educativos. Basándote en el siguiente contenido médico, crea un guion de podcast educativo de aproximadamente {duracion_minutos} minutos.
 
-ESTILO: Podcast educativo médico profesional
+ESTILO: Podcast educativo médico profesional con presentadores relajados y simpáticos
 DURACIÓN: ~{duracion_minutos} minutos
 AUDIENCIA: Estudiantes de medicina y profesionales de la salud
 
@@ -100,11 +100,10 @@ ESTRUCTURA DEL GUION:
 - CIERRE (2-3 min): Resumen de puntos clave, aplicación práctica
 
 DIRECTRICES:
-- Usa un tono profesional pero accesible
+- Usa un tono accesible y cercano
+- Pero se estricto respecto a la Calidad del contenido 
 - Incluye transiciones suaves entre temas
-- Menciona casos clínicos relevantes cuando sea apropiado
-- Incorpora preguntas reflexivas para la audiencia
-- Incluye marcadores de tiempo aproximados
+- Usa analogias para comprender mejor los conceptos más complejos
 
 FORMATO:
 [INTRO - 0:00]
@@ -126,25 +125,23 @@ GUION DE PODCAST:
 Eres un especialista en crear contenido médico conversacional. Crea un guion de podcast de {duracion_minutos} minutos donde DOS PRESENTADORES discuten el tema médico de manera natural y didáctica.
 
 ESTILO: Conversación entre dos expertos médicos
-PERSONAJES: Dr. Ana (Experta principal) y Dr. Carlos (Hace preguntas, representa al oyente)
+PERSONAJES: VOICE 1 y VOICE 2. No tienen nombres, no se tratan de doctor o doctora, son igual de expertos en el tema
 DURACIÓN: ~{duracion_minutos} minutos
 
 ESTRUCTURA:
 - Introducción conversacional (3 min)
 - Diálogo principal con intercambio natural (25 min)
-- Conclusiones y reflexiones finales (2 min)
+- Conclusiones y reflexiones finales (5 min)
 
 DIRECTRICES:
 - Diálogo natural con interrupciones y aclaraciones
-- Dr. Carlos hace preguntas que haría la audiencia
-- Incluye anécdotas clínicas relevantes
+- Incluye analogias para temas complejos 
 - Mantén el ritmo dinámico y entretenido
 - Usa expresiones naturales del habla
 
 FORMATO:
-[INTRO - 0:00]
-Dr. Ana: [Texto...]
-Dr. Carlos: [Texto...]
+Dr. Ana: [VOICE 1]
+Dr. Carlos: VOICE 2]
 
 [TEMA PRINCIPAL - 3:00]
 Dr. Ana: [Explicación...]
