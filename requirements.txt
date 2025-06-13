@@ -1,0 +1,33 @@
+# Dependencias principales para Reum-AI Total
+
+# Framework web
+Flask==2.3.3
+Werkzeug==2.3.7
+
+# IA y Google Cloud
+google-cloud-aiplatform>=1.71.0
+vertexai>=1.71.0
+
+# Procesamiento de archivos PDF
+PyPDF2==3.0.1
+python-dotenv==1.0.0
+
+# Utilidades
+requests==2.31.0
+urllib3==2.0.7
+
+# Dependencias adicionales para funcionalidades extendidas
+# Para manejo de JSON y datos estructurados
+json5==0.9.14
+
+# Para desarrollo y testing (opcionales)
+# Flask-CORS==4.0.0  # Si necesitas CORS para desarrollo
+# watchdog==3.0.0    # Para auto-reload en desarrollo
+# pytest==7.4.0      # Para testing
+
+# Notas de instalación:
+# 1. Asegúrate de tener Python 3.8+ instalado
+# 2. Crea un entorno virtual: python -m venv venv
+# 3. Activa el entorno: source venv/bin/activate (Linux/Mac) o venv\Scripts\activate (Windows)
+# 4. Instala dependencias: pip install -r requirements.txt
+# 5. Configura tu archivo .env con las credenciales de Vertex AI

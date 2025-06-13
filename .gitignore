@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.staging
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Material generado
+material_generado/
+guiones_transitorios/
+guiones_finales/
+pdf_input/*.pdf
+
+# Logs y debug
+*.log
+debug_prompt_*.txt
+
+# Temporales
+temp_*
+*.tmp
+*.temp
+
+# Archivos de audio/video
+*.mp3
+*.wav
+*.mp4
+*.avi
+
+# Respaldos
+*.backup
+*.backup_*

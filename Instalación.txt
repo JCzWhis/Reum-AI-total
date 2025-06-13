@@ -1,0 +1,137 @@
+# 🎙️ Editor de Guiones Reum-AI - Instalación
+
+## 📋 Resumen
+Plataforma web para editar guiones de podcast médico usando IA, optimizada para Azure Text-to-Speech.
+
+## 🛠️ Instalación Paso a Paso
+
+### 1. **Preparar el Entorno**
+```bash
+# Clonar o descargar el proyecto
+cd ReumAI_Pipeline
+
+# Crear entorno virtual (recomendado)
+python -m venv venv
+
+# Activar entorno virtual
+# En Windows:
+venv\Scripts\activate
+# En macOS/Linux:
+source venv/bin/activate
+```
+
+### 2. **Instalar Dependencias**
+```bash
+pip install -r requirements.txt
+```
+
+### 3. **Configurar Variables de Entorno**
+Crea un archivo `.env` en la raíz del proyecto:
+```env
+VERTEX_AI_PROJECT_ID=tu-proyecto-google-cloud
+VERTEX_AI_LOCATION=us-central1
+GEMINI_MODEL_NAME=gemini-pro
+```
+
+### 4. **Crear Estructura de Archivos**
+Tu directorio debe verse así:
+```
+ReumAI_Pipeline/
+├── Agentes/
+│   ├── __init__.py          # Crear archivo vacío
+│   ├── Redactor.py          # Tu archivo existente
+│   ├── Editor.py            # Tu archivo existente
+│   └── Pulido.py            # Tu archivo existente
+├── templates/
+│   └── index.html           # Copiar desde la interfaz HTML
+├── static/                  # Se crea automáticamente
+├── Fuentes/                 # Tu carpeta existente
+├── Prompts/                 # Tu carpeta existente
+├── guiones_transitorios/    # Tu carpeta existente
+├── guiones_finales/         # Tu carpeta existente
+├── app.py                   # Archivo principal nuevo
+├── flask_backend.py         # Backend nuevo
+├── Pipeline.py              # Tu archivo existente
+├── requirements.txt         # Archivo de dependencias
+├── .env                     # Variables de entorno
+└── tema.txt                 # Tu archivo existente
+```
+
+### 5. **Crear Archivos Necesarios**
+
+**Crear `Agentes/__init__.py`:**
+```python
+# Archivo vacío para hacer Agentes un paquete Python
+```
+
+**Crear `templates/index.html`:**
+Copia el contenido del HTML de la interfaz que generé.
+
+### 6. **Ejecutar la Aplicación**
+```bash
+python app.py
+```
+
+La aplicación se abrirá automáticamente en `http://localhost:5000`
+
+## 🔧 Solución de Problemas
+
+### Error: "No module named 'Agentes'"
+```bash
+# Crear archivo __init__.py en la carpeta Agentes
+touch Agentes/__init__.py
+```
+
+### Error: "Template not found"
+```bash
+# Verificar que existe templates/index.html
+mkdir templates
+# Copiar el HTML de la interfaz a templates/index.html
+```
+
+### Error: "Variables de entorno no encontradas"
+```bash
+# Verificar archivo .env en la raíz del proyecto
+# Asegurar que contiene las variables de Google Cloud
+```
+
+### Puerto 5000 ocupado
+```bash
+# Cambiar puerto en app.py línea final:
+app.run(port=5001)  # Usar puerto diferente
+```
+
+## 🚀 Uso
+
+1. **Ejecutar Pipeline**: Generar guión desde cero
+2. **Cargar Guión**: Abrir guión existente para editar
+3. **Modificar con IA**: Dar instrucciones en lenguaje natural
+4. **Validar TTS**: Verificar optimización para Azure
+5. **Exportar**: Descargar guión listo para TTS
+
+## 📝 Funcionalidades
+
+- ✅ Editor visual integrado
+- ✅ Modificación asistida por IA  
+- ✅ Validación para Azure TTS
+- ✅ Estadísticas detalladas
+- ✅ Pipeline completo integrado
+- ✅ Herramientas de optimización
+- ✅ Manejo de versiones
+
+## 🔗 Endpoints API
+
+- `GET /` - Interfaz principal
+- `POST /api/cargar_guion` - Cargar guión existente
+- `POST /api/modificar_guion` - Modificar con IA
+- `POST /api/guardar_guion` - Guardar cambios
+- `POST /api/validar_tts` - Validar formato TTS
+- `POST /api/ejecutar_pipeline` - Ejecutar pipeline completo
+
+## 📞 Soporte
+
+Si tienes problemas:
+1. Verifica que todos los archivos estén en su lugar
+2. Revisa las variables de entorno en `.env`
+3. Confirma que las dependencias están instaladas
+4. Verifica los logs en la consola donde ejecutas `python app.py`
