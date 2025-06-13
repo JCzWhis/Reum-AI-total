@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reum-AI Total - Panel Principal</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(45deg, #1a237e, #3949ab);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .tabs {
+            display: flex;
+            background: #f5f5f5;
+            border-bottom: 2px solid #e0e0e0;
+            overflow-x: auto;
+        }
+
+        .tab {
+            padding: 15px 25px;
+            cursor: pointer;
+            background: #f5f5f5;
+            border: none;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .tab.active {
+            background: white;
+            border-bottom-color: #2196F3;
+            color: #2196F3;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 30px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .function-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .function-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            border-left: 5px solid #2196F3;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .function-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .function-card h3 {
+            color: #1a237e;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .function-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .file-upload {
+            border: 2px dashed #2196F3;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            background: #f0f7ff;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .file-upload:hover {
+            background: #e3f2fd;
+        }
+
+        .file-upload.dragover {
+            border-color: #1976d2;
+            background: #e3f2fd;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-width: 150px;
+        }
+
+        .btn-primary { background: linear-gradient(45deg, #2196F3, #21CBF3); color: white; }
+        .btn-secondary { background: linear-gradient(45deg, #FF9800, #FF5722); color: white; }
+        .btn-success { background: linear-gradient(45deg, #4CAF50, #45a049); color: white; }
+        .btn-danger { background: linear-gradient(45deg, #f44336, #d32f2f); color: white; }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px 0;
+            display: none;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2196F3, #21CBF3);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .results-area {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #e0e0e0;
+            display: none;
+        }
+
+        .results-area h4 {
+            color: #1a237e;
+            margin-bottom: 15px;
+        }
+
+        .download-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .download-link {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .download-link:hover {
+            background: #bbdefb;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            color: white;
+            font-weight: 600;
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+            max-width: 400px;
+        }
+
+        .notification.success { background: #4caf50; }
+        .notification.error { background: #f44336; }
+        .notification.warning { background: #ff9800; }
+        .notification.info { background: #2196f3; }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #2196F3;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .config-section {
+            background: #fff3e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #ff9800;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .input-group input, .input-group select, .input-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .input-group input:focus, .input-group select:focus, .input-group textarea:focus {
+            outline: none;
+            border-color: #2196F3;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .function-grid {
+                grid-template-columns: 1fr;
+            }
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            .tabs {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏥 Reum-AI Total</h1>
+            <p>Sistema completo de generación de contenido educativo médico con IA</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" onclick="cambiarTab('dashboard')">📊 Panel Principal</button>
+            <button class="tab" onclick="cambiarTab('texto')">📖 Generar Texto</button>
+            <button class="tab" onclick="cambiarTab('flashcards')">🎴 Generar Flashcards</button>
+            <button class="tab" onclick="cambiarTab('mocktest')">🧪 Mock Test</button>
+            <button class="tab" onclick="cambiarTab('html')">🌐 Generar HTML</button>
+            <button class="tab" onclick="cambiarTab('podcast')">🎙️ Guiones Podcast</button>
+            <button class="tab" onclick="cambiarTab('editor')">✏️ Editor Avanzado</button>
+        </div>
+
+        <!-- TAB: DASHBOARD -->
+        <div id="tab-dashboard" class="tab-content active">
+            <h2>🚀 Funciones Principales</h2>
+            <p>Selecciona la función que deseas usar para procesar tus PDFs médicos:</p>
+            
+            <div class="function-grid">
+                <div class="function-card">
+                    <h3>📖 Generar Texto Educativo</h3>
+                    <p>Convierte PDFs médicos en textos educativos estructurados: resúmenes, explicaciones didácticas, puntos clave organizados.</p>
+                    <button class="btn btn-primary" onclick="cambiarTab('texto')">Comenzar</button>
+                </div>
+
+                <div class="function-card">
+                    <h3>🎴 Crear Flashcards</h3>
+                    <p>Genera tarjetas de estudio en formato TXT y JSON compatible con Anki. Perfecto para memorización médica.</p>
+                    <button class="btn btn-primary" onclick="cambiarTab('flashcards')">Comenzar</button>
+                </div>
+
+                <div class="function-card">
+                    <h3>🧪 Mock Test Interactivo</h3>
+                    <p>Crea exámenes de 45 preguntas con HTML interactivo, explicaciones automáticas y sistema de puntuación.</p>
+                    <button class="btn btn-primary" onclick="cambiarTab('mocktest')">Comenzar</button>
+                </div>
+
+                <div class="function-card">
+                    <h3>🎙️ Guiones de Podcast</h3>
+                    <p>Genera guiones de podcast profesionales en múltiples estilos: educativo, conversacional, storytelling.</p>
+                    <button class="btn btn-primary" onclick="cambiarTab('podcast')">Comenzar</button>
+                </div>
+            </div>
+
+            <div class="config-section">
+                <h3>⚙️ Configuración Global</h3>
+                <div class="two-column">
+                    <div class="input-group">
+                        <label>Modelo de IA:</label>
+                        <select id="aiModel">
+                            <option value="gemini-1.5-flash-002">Gemini 1.5 Flash (Rápido)</option>
+                            <option value="gemini-1.5-pro">Gemini 1.5 Pro (Avanzado)</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Idioma de salida:</label>
+                        <select id="outputLanguage">
+                            <option value="es">Español</option>
+                            <option value="en">Inglés</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: GENERAR TEXTO -->
+        <div id="tab-texto" class="tab-content">
+            <h2>📖 Generar Texto Educativo</h2>
+            
+            <div class="file-upload" onclick="document.getElementById('pdfFile1').click()" 
+                 ondragover="allowDrop(event)" ondrop="handleDrop(event, 'pdfFile1')">
+                <p>📄 Arrastra un PDF aquí o haz clic para seleccionar</p>
+                <input type="file" id="pdfFile1" accept=".pdf" style="display: none;" onchange="mostrarArchivo(this, 'archivo1')">
+                <p id="archivo1" style="margin-top: 10px; font-weight: bold; color: #2196F3;"></p>
+            </div>
+
+            <div class="config-section">
+                <h3>⚙️ Configuración del Texto</h3>
+                <div class="two-column">
+                    <div class="input-group">
+                        <label>Tipo de contenido:</label>
+                        <select id="tipoTexto">
+                            <option value="resumen">Resumen estructurado</option>
+                            <option value="explicacion">Explicación didáctica</option>
+                            <option value="puntos_clave">Puntos clave</option>
+                            <option value="preguntas">Preguntas de estudio</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Nivel de detalle:</label>
+                        <select id="nivelDetalle">
+                            <option value="basico">Básico</option>
+                            <option value="intermedio">Intermedio</option>
+                            <option value="avanzado">Avanzado</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-success" onclick="generarTexto()" id="btnTexto">
+                🚀 Generar Texto Educativo
+            </button>
+
+            <div class="progress-bar" id="progressTexto">
+                <div class="progress-fill"></div>
+            </div>
+
+            <div class="results-area" id="resultsTexto">
+                <h4>✅ Texto generado exitosamente</h4>
+                <p id="textoPreview"></p>
+                <div class="download-links" id="downloadTexto"></div>
+            </div>
+        </div>
+
+        <!-- TAB: FLASHCARDS -->
+        <div id="tab-flashcards" class="tab-content">
+            <h2>🎴 Generar Flashcards</h2>
+            
+            <div class="file-upload" onclick="document.getElementById('pdfFile2').click()" 
+                 ondragover="allowDrop(event)" ondrop="handleDrop(event, 'pdfFile2')">
+                <p>📄 Arrastra un PDF aquí o haz clic para seleccionar</p>
+                <input type="file" id="pdfFile2" accept=".pdf" style="display: none;" onchange="mostrarArchivo(this, 'archivo2')">
+                <p id="archivo2" style="margin-top: 10px; font-weight: bold; color: #2196F3;"></p>
+            </div>
+
+            <div class="config-section">
+                <h3>⚙️ Configuración de Flashcards</h3>
+                <div class="two-column">
+                    <div class="input-group">
+                        <label>Cantidad de tarjetas:</label>
+                        <select id="cantidadCards">
+                            <option value="15">15 tarjetas</option>
+                            <option value="25" selected>25 tarjetas</option>
+                            <option value="35">35 tarjetas</option>
+                            <option value="50">50 tarjetas</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Formato de salida:</label>
+                        <select id="formatoCards">
+                            <option value="txt">Solo TXT</option>
+                            <option value="json">Solo JSON (Anki)</option>
+                            <option value="ambos" selected>Ambos formatos</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-success" onclick="generarFlashcards()" id="btnFlashcards">
+                🚀 Generar Flashcards
+            </button>
+
+            <div class="progress-bar" id="progressFlashcards">
+                <div class="progress-fill"></div>
+            </div>
+
+            <div class="results-area" id="resultsFlashcards">
+                <h4>✅ Flashcards generadas exitosamente</h4>
+                <p id="flashcardsPreview"></p>
+                <div class="download-links" id="downloadFlashcards"></div>
+            </div>
+        </div>
+
+        <!-- TAB: MOCK TEST -->
+        <div id="tab-mocktest" class="tab-content">
+            <h2>🧪 Generar Mock Test</h2>
+            
+            <div class="file-upload" onclick="document.getElementById('pdfFile3').click()" 
+                 ondragover="allowDrop(event)" ondrop="handleDrop(event, 'pdfFile3')">
+                <p>📄 Arrastra un PDF aquí o haz clic para seleccionar</p>
+                <input type="file" id="pdfFile3" accept=".pdf" style="display: none;" onchange="mostrarArchivo(this, 'archivo3')">
+                <p id="archivo3" style="margin-top: 10px; font-weight: bold; color: #2196F3;"></p>
+            </div>
+
+            <div class="config-section">
+                <h3>⚙️ Configuración del Test</h3>
+                <div class="two-column">
+                    <div class="input-group">
+                        <label>Número de preguntas:</label>
+                        <select id="cantidadPreguntas">
+                            <option value="20">20 preguntas</option>
+                            <option value="30">30 preguntas</option>
+                            <option value="45" selected>45 preguntas</option>
+                            <option value="60">60 preguntas</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Dificultad:</label>
+                        <select id="dificultadTest">
+                            <option value="basico">Básico</option>
+                            <option value="intermedio" selected>Intermedio</option>
+                            <option value="avanzado">Avanzado</option>
+                            <option value="mixto">Mixto</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-success" onclick="generarMockTest()" id="btnMockTest">
+                🚀 Generar Mock Test
+            </button>
+
+            <div class="progress-bar" id="progressMockTest">
+                <div class="progress-fill"></div>
+            </div>
+
+            <div class="results-area" id="resultsMockTest">
+                <h4>✅ Mock Test generado exitosamente</h4>
+                <p id="mocktestPreview"></p>
+                <div class="download-links" id="downloadMockTest"></div>
+            </div>
+        </div>
+
+        <!-- TAB: HTML -->
+        <div id="tab-html" class="tab-content">
+            <h2>🌐 Generar Página HTML</h2>
+            
+            <div class="file-upload" onclick="document.getElementById('pdfFile4').click()" 
+                 ondragover="allowDrop(event)" ondrop="handleDrop(event, 'pdfFile4')">
+                <p>📄 Arrastra un PDF aquí o haz clic para seleccionar</p>
+                <input type="file" id="pdfFile4" accept=".pdf" style="display: none;" onchange="mostrarArchivo(this, 'archivo4')">
+                <p id="archivo4" style="margin-top: 10px; font-weight: bold; color: #2196F3;"></p>
+            </div>
+
+            <div class="config-section">
+                <h3>⚙️ Configuración del HTML</h3>
+                <div class="two-column">
+                    <div class="input-group">
+                        <label>Estilo de página:</label>
+                        <select id="estiloHTML">
+                            <option value="academico">Académico</option>
+                            <option value="moderno" selected>Moderno</option>
+                            <option value="minimalista">Minimalista</option>
+                            <option value="medico">Tema médico</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Incluir navegación:</label>
+                        <select id="navegacionHTML">
+                            <option value="si" selected>Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-success" onclick="generarHTML()" id="btnHTML">
+                🚀 Generar Página HTML
+            </button>
+
+            <div class="progress-bar" id="progressHTML">
+                <div class="progress-fill"></div>
+            </div>
+
+            <div class="results-area" id="resultsHTML">
+                <h4>✅ Página HTML generada exitosamente</h4>
+                <p id="htmlPreview"></p>
+                <div class="download-links" id="downloadHTML"></div>
+            </div>
+        </div>
+
+        <!-- TAB: PODCAST -->
+        <div id="tab-podcast" class="tab-content">
+            <h2>🎙️ Generar Guiones de Podcast</h2>
+            
+            <div class="file-upload" onclick="document.getElementById('pdfFile5').click()" 
+                 ondragover="allowDrop(event)" ondrop="handleDrop(event, 'pdfFile5')">
+                <p>📄 Arrastra un PDF aquí o haz clic para seleccionar</p>
+                <input type="file" id="pdfFile5" accept=".pdf" style="display: none;" onchange="mostrarArchivo(this, 'archivo5')">
+                <p id="archivo5" style="margin-top: 10px; font-weight: bold; color: #2196F3;"></p>
+            </div>
+
+            <div class="config-section">
+                <h3>⚙️ Configuración del Podcast</h3>
+                <div class="two-column">
+                    <div class="input-group">
+                        <label>Estilo de podcast:</label>
+                        <select id="estiloPodcast">
+                            <option value="educativo" selected>Educativo</option>
+                            <option value="conversacional">Conversacional</option>
+                            <option value="storytelling">Storytelling</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Duración objetivo:</label>
+                        <select id="duracionPodcast">
+                            <option value="15">15 minutos</option>
+                            <option value="30" selected>30 minutos</option>
+                            <option value="45">45 minutos</option>
+                            <option value="60">60 minutos</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-success" onclick="generarPodcast()" id="btnPodcast">
+                🚀 Generar Guión de Podcast
+            </button>
+
+            <div class="progress-bar" id="progressPodcast">
+                <div class="progress-fill"></div>
+            </div>
+
+            <div class="results-area" id="resultsPodcast">
+                <h4>✅ Guión de podcast generado exitosamente</h4>
+                <p id="podcastPreview"></p>
+                <div class="download-links" id="downloadPodcast"></div>
+            </div>
+        </div>
+
+        <!-- TAB: EDITOR -->
+        <div id="tab-editor" class="tab-content">
+            <iframe src="/" style="width: 100%; height: 80vh; border: none; border-radius: 10px;"></iframe>
+        </div>
+    </div>
+
+    <script>
+        let tabActual = 'dashboard';
+
+        // Función para cambiar tabs
+        function cambiarTab(tab) {
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.querySelectorAll('.tab').forEach(button => {
+                button.classList.remove('active');
+            });
+
+            document.getElementById(`tab-${tab}`).classList.add('active');
+            event.target.classList.add('active');
+            tabActual = tab;
+        }
+
+        // Función para mostrar notificaciones
+        function mostrarNotificacion(mensaje, tipo = 'success', duracion = 4000) {
+            const notification = document.createElement('div');
+            notification.className = `notification ${tipo}`;
+            notification.textContent = mensaje;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, duracion);
+        }
+
+        // Funciones para drag & drop
+        function allowDrop(ev) {
+            ev.preventDefault();
+            ev.currentTarget.classList.add('dragover');
+        }
+
+        function handleDrop(ev, inputId) {
+            ev.preventDefault();
+            ev.currentTarget.classList.remove('dragover');
+            
+            const files = ev.dataTransfer.files;
+            if (files.length > 0) {
+                document.getElementById(inputId).files = files;
+                mostrarArchivo(document.getElementById(inputId), inputId.replace('pdfFile', 'archivo'));
+            }
+        }
+
+        // Función para mostrar archivo seleccionado
+        function mostrarArchivo(input, displayId) {
+            const file = input.files[0];
+            if (file) {
+                document.getElementById(displayId).textContent = `📄 ${file.name} (${(file.size / 1024 / 1024).toFixed(2)} MB)`;
+            }
+        }
+
+        // Función para mostrar progreso
+        function mostrarProgreso(id, porcentaje) {
+            const progressBar = document.getElementById(`progress${id}`);
+            const progressFill = progressBar.querySelector('.progress-fill');
+            
+            progressBar.style.display = 'block';
+            progressFill.style.width = porcentaje + '%';
+            
+            if (porcentaje >= 100) {
+                setTimeout(() => {
+                    progressBar.style.display = 'none';
+                }, 1000);
+            }
+        }
+
+        // Función para mostrar resultados
+        function mostrarResultados(id, datos) {
+            const resultsArea = document.getElementById(`results${id}`);
+            const previewElement = document.getElementById(`${id.toLowerCase()}Preview`);
+            const downloadArea = document.getElementById(`download${id}`);
+            
+            previewElement.textContent = datos.preview || 'Contenido generado exitosamente';
+            
+            // Crear enlaces de descarga
+            downloadArea.innerHTML = '';
+            if (datos.archivos) {
+                datos.archivos.forEach(archivo => {
+                    const link = document.createElement('a');
+                    link.href = archivo.url;
+                    link.className = 'download-link';
+                    link.textContent = `📥 ${archivo.nombre}`;
+                    link.download = archivo.nombre;
+                    downloadArea.appendChild(link);
+                });
+            }
+            
+            resultsArea.style.display = 'block';
+        }
+
+        // Funciones principales de generación
+        async function generarTexto() {
+            const fileInput = document.getElementById('pdfFile1');
+            const tipoTexto = document.getElementById('tipoTexto').value;
+            const nivelDetalle = document.getElementById('nivelDetalle').value;
+            
+            if (!fileInput.files[0]) {
+                mostrarNotificacion('Por favor selecciona un archivo PDF', 'warning');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('pdf', fileInput.files[0]);
+            formData.append('tipo_contenido', tipoTexto);
+            formData.append('nivel_detalle', nivelDetalle);
+
+            try {
+                document.getElementById('btnTexto').disabled = true;
+                mostrarProgreso('Texto', 20);
+                mostrarNotificacion('Iniciando generación de texto...', 'info');
+
+                const response = await fetch('/api/generar_texto', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                mostrarProgreso('Texto', 70);
+
+                const data = await response.json();
+
+                if (data.success) {
+                    mostrarProgreso('Texto', 100);
+                    mostrarResultados('Texto', data);
+                    mostrarNotificacion('Texto generado exitosamente!');
+                } else {
+                    throw new Error(data.error || 'Error desconocido');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                mostrarNotificacion('Error al generar texto: ' + error.message, 'error');
+            } finally {
+                document.getElementById('btnTexto').disabled = false;
+            }
+        }
+
+        async function generarFlashcards() {
+            const fileInput = document.getElementById('pdfFile2');
+            const cantidad = document.getElementById('cantidadCards').value;
+            const formato = document.getElementById('formatoCards').value;
+            
+            if (!fileInput.files[0]) {
+                mostrarNotificacion('Por favor selecciona un archivo PDF', 'warning');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('pdf', fileInput.files[0]);
+            formData.append('cantidad', cantidad);
+            formData.append('formato_salida', formato);
+
+            try {
+                document.getElementById('btnFlashcards').disabled = true;
+                mostrarProgreso('Flashcards', 20);
+                mostrarNotificacion('Iniciando generación de flashcards...', 'info');
+
+                const response = await fetch('/api/generar_flashcards', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                mostrarProgreso('Flashcards', 70);
+
+                const data = await response.json();
+
+                if (data.success) {
+                    mostrarProgreso('Flashcards', 100);
+                    mostrarResultados('Flashcards', data);
+                    mostrarNotificacion('Flashcards generadas exitosamente!');
+                } else {
+                    throw new Error(data.error || 'Error desconocido');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                mostrarNotificacion('Error al generar flashcards: ' + error.message, 'error');
+            } finally {
+                document.getElementById('btnFlashcards').disabled = false;
+            }
+        }
+
+        async function generarMockTest() {
+            const fileInput = document.getElementById('pdfFile3');
+            const cantidad = document.getElementById('cantidadPreguntas').value;
+            const dificultad = document.getElementById('dificultadTest').value;
+            
+            if (!fileInput.files[0]) {
+                mostrarNotificacion('Por favor selecciona un archivo PDF', 'warning');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('pdf', fileInput.files[0]);
+            formData.append('cantidad_preguntas', cantidad);
+            formData.append('dificultad', dificultad);
+
+            try {
+                document.getElementById('btnMockTest').disabled = true;
+                mostrarProgreso('MockTest', 20);
+                mostrarNotificacion('Iniciando generación de mock test...', 'info');
+
+                const response = await fetch('/api/generar_mocktest', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                mostrarProgreso('MockTest', 70);
+
+                const data = await response.json();
+
+                if (data.success) {
+                    mostrarProgreso('MockTest', 100);
+                    mostrarResultados('MockTest', data);
+                    mostrarNotificacion('Mock test generado exitosamente!');
+                } else {
+                    throw new Error(data.error || 'Error desconocido');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                mostrarNotificacion('Error al generar mock test: ' + error.message, 'error');
+            } finally {
+                document.getElementById('btnMockTest').disabled = false;
+            }
+        }
+
+        async function generarHTML() {
+            const fileInput = document.getElementById('pdfFile4');
+            const estilo = document.getElementById('estiloHTML').value;
+            const navegacion = document.getElementById('navegacionHTML').value;
+            
+            if (!fileInput.files[0]) {
+                mostrarNotificacion('Por favor selecciona un archivo PDF', 'warning');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('pdf', fileInput.files[0]);
+            formData.append('estilo', estilo);
+            formData.append('navegacion', navegacion);
+
+            try {
+                document.getElementById('btnHTML').disabled = true;
+                mostrarProgreso('HTML', 20);
+                mostrarNotificacion('Iniciando generación de HTML...', 'info');
+
+                const response = await fetch('/api/generar_html', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                mostrarProgreso('HTML', 70);
+
+                const data = await response.json();
+
+                if (data.success) {
+                    mostrarProgreso('HTML', 100);
+                    mostrarResultados('HTML', data);
+                    mostrarNotificacion('Página HTML generada exitosamente!');
+                } else {
+                    throw new Error(data.error || 'Error desconocido');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                mostrarNotificacion('Error al generar HTML: ' + error.message, 'error');
+            } finally {
+                document.getElementById('btnHTML').disabled = false;
+            }
+        }
+
+        async function generarPodcast() {
+            const fileInput = document.getElementById('pdfFile5');
+            const estilo = document.getElementById('estiloPodcast').value;
+            const duracion = document.getElementById('duracionPodcast').value;
+            
+            if (!fileInput.files[0]) {
+                mostrarNotificacion('Por favor selecciona un archivo PDF', 'warning');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('pdf', fileInput.files[0]);
+            formData.append('estilo_podcast', estilo);
+            formData.append('duracion_minutos', duracion);
+
+            try {
+                document.getElementById('btnPodcast').disabled = true;
+                mostrarProgreso('Podcast', 20);
+                mostrarNotificacion('Iniciando generación de guión...', 'info');
+
+                const response = await fetch('/api/generar_podcast', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                mostrarProgreso('Podcast', 70);
+
+                const data = await response.json();
+
+                if (data.success) {
+                    mostrarProgreso('Podcast', 100);
+                    mostrarResultados('Podcast', data);
+                    mostrarNotificacion('Guión de podcast generado exitosamente!');
+                } else {
+                    throw new Error(data.error || 'Error desconocido');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                mostrarNotificacion('Error al generar guión: ' + error.message, 'error');
+            } finally {
+                document.getElementById('btnPodcast').disabled = false;
+            }
+        }
+
+        // Prevenir comportamiento por defecto del drag
+        document.addEventListener('dragover', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('drop', function(e) {
+            e.preventDefault();
+        });
+
+        // Remover clase dragover cuando se sale del área
+        document.querySelectorAll('.file-upload').forEach(upload => {
+            upload.addEventListener('dragleave', function(e) {
+                this.classList.remove('dragover');
+            });
+        });
+    </script>
+</body>
+</html>

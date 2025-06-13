@@ -6,8 +6,8 @@ import webbrowser
 import threading
 import time
 
-# Importar el backend Flask
-from flask_backend import app
+# Importar el backend Flask completo
+from flask_backend_complete import app
 
 # Configurar Flask para servir archivos estáticos
 @app.route('/static/<path:filename>')
@@ -35,11 +35,12 @@ EMBEDDED_HTML = """
 def abrir_navegador():
     """Abrir navegador después de un breve delay"""
     time.sleep(1.5)
-    webbrowser.open('http://localhost:5000')
+    webbrowser.open('http://localhost:5000/dashboard')
 
 if __name__ == '__main__':
-    print("🚀 Iniciando Editor de Guiones Reum-AI...")
-    print("📡 Servidor disponible en: http://localhost:5000")
+    print("🚀 Iniciando Reum-AI Total...")
+    print("📡 Dashboard disponible en: http://localhost:5000/dashboard")
+    print("📡 Editor original en: http://localhost:5000/")
     
     # Crear directorios necesarios
     os.makedirs('templates', exist_ok=True)
