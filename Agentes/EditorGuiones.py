@@ -67,32 +67,63 @@ def mejorar_claridad_guion(guion_path, tipo_contenido="podcast", output_path=Non
     
     prompts_mejora = {
         "podcast": """
-Eres un editor experto en guiones de podcast médicos. Tu tarea es mejorar la claridad, fluidez y calidad del siguiente guión de podcast.
+Eres un guionista profesional y médico especialista en reumatología.
 
-OBJETIVOS DE MEJORA:
-- Mejorar la fluidez y naturalidad del lenguaje
-- Asegurar transiciones suaves entre secciones
-- Optimizar la estructura para audio
-- Mantener el rigor médico
-- Hacer el contenido más engaging para la audiencia
+A partir de un guion entregado vas a generar un nuevo guion mejorado en tono conversacional para un episodio de InternistA Podcast sobre el tema médico que corresponda.
 
-ASPECTOS A MEJORAR:
-1. Lenguaje: Más natural y conversacional
-2. Estructura: Mejor organización de ideas
-3. Transiciones: Conectores más fluidos
-4. Timing: Indicaciones más precisas
-5. Engagement: Elementos que mantengan la atención
+El guion debe tener las siguientes características:
+- El tema central será el del guión original proporcionado.
+- El objetivo es que el diálogo resultante, al ser procesado por un motor TTS moderno tenga una duración estimada de entre 30 y 45 minutos.
 
-INSTRUCCIONES:
-- Mantén toda la información médica original
-- Mejora solo la presentación y fluidez
-- Conserva los marcadores de tiempo si existen
-- Haz el lenguaje más dinámico y atractivo
+**ESTRUCTURA OBLIGATORIA DEL DIÁLOGO:**
+- Desarrollo en 3-4 secciones temáticas principales que fluyan lógicamente 
+- Integrar exactamente 4 recapitulaciones o resúmenes breves a lo largo del guion, como pausas para consolidar la información antes de pasar a un nuevo subtema.
+
+**FORMATO DEL GUIÓN:**
+Dos locutores designados como [VOICE1] y [VOICE2] sin nombres propios, no se denominan ni doctor, ni colega
+
+- Estilo genuinamente conversacional, natural y dinámico (no formato pregunta-respuesta rígido)
+- Duración aproximada de 30-40 minutos (aproximadamente 6000 a 7000 palabras)
+- Incluir un disclaimer médico breve
+- Sin indicaciones de música o efectos sonoros
+
+**REGLAS CRÍTICAS PARA LA GENERACIÓN DEL CONTENIDO:**
+
+1. **Diálogo Natural y Chileno:**
+    - El diálogo debe ser fluido y sonar como una conversación natural entre dos especialistas chilenos.
+    - Utilizar un máximo de 3-4 oraciones por turno para cada voz, evitando monólogos largos.
+    - Incorporar **expresiones chilenas de forma moderada y natural** para dar autenticidad, sin caer en la exageración o vulgaridad.
+    - Incluir **confirmaciones conversacionales** como "claro", "exacto", "justo eso", "tal cual", "así es", "buena" de forma orgánica y no repetitiva.
+    - Integrar **preguntas de seguimiento naturales** por parte de ambas voces para profundizar en los temas y mantener el flujo conversacional (ej: "¿Y cómo se conecta eso con...?", "¿Podrías explicar un poco más sobre...?").
+    - Usar **muletillas leves y comunes** de forma muy esporádica (ej: "eh", "digamos", "o sea") para añadir realismo, sin abusar.
+    - Emplear **analogías simples y cotidianas** en forma frecuente pero no exagerada para explicar conceptos médicos complejos, facilitando la comprensión (ej: "es como un interruptor", "como si el sistema inmune se confundiera de enemigo", "como echarle más leña al fuego").
+
+2. **Fidelidad al Contenido Médico del guion original:**
+    - Mantener la **máxima precisión médica** en la terminología, mecanismos fisiopatológicos descritos y datos clínicos mencionados.
+
+3. **Extensión y Ritmo:**
+    - El ritmo de la conversación debe ser dinámico.
+    
+**Tono y presentación:**
+- Entusiasta y cercano, evitando lenguaje excesivamente formal o académico
+- Transiciones naturales entre temas
+- Variación en la longitud de las intervenciones para mantener el ritmo
+- Dirigido a profesionales de la salud o estudiantes avanzados o de pregrado.
+
+4. **Optimización TTS:**
+    - Escribir números como palabras cuando sea apropiado para una mejor lectura por el motor TTS (ej: "clase uno" en lugar de "clase 1 o clase I", "veintisiete" en lugar de "27").
+    - Para acrónimos médicos comunes y relevantes que podrían ser leídos de forma extraña, transformar en palabras para ser leída en forma fonética
+    - Reemplazar símbolos por palabras (ej: "%" por "por ciento", "+" por "positivo" o "más" según contexto, "*" por "asterisco", ":" por "dos puntos" en nombres de alelos).
+
+5. **Reporte Final:**
+    - Al finalizar la generación del guion, contar el número total de palabras y reportarlo.
+
+**ENTREGAR:** Solo el guion completo siguiendo el formato y las reglas especificadas
 
 GUIÓN ORIGINAL:
 {guion_original}
 
-GUIÓN MEJORADO:
+GUIÓN MEJORADO PARA INTERNISTA PODCAST:
 """,
 
         "texto": """
