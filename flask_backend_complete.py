@@ -80,15 +80,27 @@ def index():
 
 def save_uploaded_file(file):
     """Guarda un archivo subido y retorna la ruta"""
-    if file and file.filename.endswith('.pdf'):
-        filename = secure_filename(file.filename)
-        # Agregar timestamp para evitar conflictos
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"{timestamp}_{filename}"
-        filepath = os.path.join(PDF_INPUT_DIR, filename)
-        file.save(filepath)
-        return filepath
+    if file and file.filename:
+        extension = os.path.splitext(file.filename)[1].lower()
+        if extension in ['.pdf', '.txt', '.md', '.med']:
+            filename = secure_filename(file.filename)
+            # Agregar timestamp para evitar conflictos
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            filename = f"{timestamp}_{filename}"
+            filepath = os.path.join(PDF_INPUT_DIR, filename)
+            file.save(filepath)
+            return filepath
     return None
+
+def save_multiple_files(files):
+    """Guarda múltiples archivos subidos y retorna las rutas"""
+    rutas_guardadas = []
+    for file in files:
+        if file and file.filename:
+            ruta = save_uploaded_file(file)
+            if ruta:
+                rutas_guardadas.append(ruta)
+    return rutas_guardadas
 
 @app.route('/api/generar_texto', methods=['POST'])
 def generar_texto():
@@ -208,43 +220,61 @@ def generar_flashcards():
 
 @app.route('/api/generar_mocktest', methods=['POST'])
 def generar_mocktest():
-    """Generar mock test desde PDF"""
+    """Generar mock test desde múltiples archivos (PDF, TXT, MD, MED)"""
     try:
-        # Verificar archivo
-        if 'pdf' not in request.files:
-            return jsonify({'success': False, 'error': 'No se proporcionó archivo PDF'})
+        # Verificar archivos - puede ser uno o múltiples
+        archivos_subidos = []
         
-        file = request.files['pdf']
-        if file.filename == '':
-            return jsonify({'success': False, 'error': 'No se seleccionó archivo'})
+        # Verificar si hay un archivo individual (compatibilidad)
+        if 'pdf' in request.files and request.files['pdf'].filename:
+            archivos_subidos.append(request.files['pdf'])
+        
+        # Verificar si hay múltiples archivos
+        if 'archivos' in request.files:
+            files = request.files.getlist('archivos')
+            archivos_subidos.extend([f for f in files if f.filename])
+        
+        if not archivos_subidos:
+            return jsonify({'success': False, 'error': 'No se proporcionaron archivos'})
         
         # Parámetros
         cantidad_preguntas = int(request.form.get('cantidad_preguntas', 45))
         dificultad = request.form.get('dificultad', 'intermedio')
         
-        # Guardar archivo
-        pdf_path = save_uploaded_file(file)
-        if not pdf_path:
-            return jsonify({'success': False, 'error': 'Error al guardar archivo PDF'})
+        # Guardar archivos
+        rutas_archivos = save_multiple_files(archivos_subidos)
+        if not rutas_archivos:
+            return jsonify({'success': False, 'error': 'Error al guardar archivos o tipos no soportados'})
         
         # Importar y ejecutar generador
         from Agentes import GeneradorMockTest
         
-        # Crear nombre de salida
-        base_name = os.path.splitext(os.path.basename(pdf_path))[0]
-        output_path = os.path.join(MATERIAL_GENERADO_DIR, 'mocktests', f"mocktest_{base_name}.html")
+        # Crear nombre de salida basado en archivos (limitado para evitar nombres muy largos)
+        import hashlib
+        from datetime import datetime
+        
+        # Crear hash único basado en los archivos
+        archivos_str = "|".join(sorted([os.path.basename(ruta) for ruta in rutas_archivos]))
+        hash_archivos = hashlib.md5(archivos_str.encode()).hexdigest()[:8]
+        
+        # Nombre corto y único
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        nombre_combinado = f"mocktest_{timestamp}_{len(rutas_archivos)}archivos_{hash_archivos}"
+        
+        output_path = os.path.join(MATERIAL_GENERADO_DIR, 'mocktests', f"{nombre_combinado}.html")
         
         # Generar mock test
-        mocktest = GeneradorMockTest.generar_mocktest_desde_pdf(
-            pdf_path=pdf_path,
+        mocktest = GeneradorMockTest.generar_mocktest_desde_archivos(
+            rutas_archivos=rutas_archivos,
             cantidad_preguntas=cantidad_preguntas,
             output_path=output_path
         )
         
         if mocktest:
+            archivos_procesados = mocktest.get('archivos_procesados', [])
             return jsonify({
                 'success': True,
-                'preview': f"Mock test de {cantidad_preguntas} preguntas generado en HTML interactivo",
+                'preview': f"Mock test de {cantidad_preguntas} preguntas generado desde {len(archivos_procesados)} archivos: {', '.join(archivos_procesados)}",
                 'archivos': [{
                     'nombre': os.path.basename(output_path),
                     'url': f'/api/download/mocktests/{os.path.basename(output_path)}'
@@ -555,6 +585,29 @@ def generar_html_desde_texto(contenido, titulo, estilo, incluir_navegacion):
 """
     
     return html_template
+
+@app.route('/api/obtener_archivos')
+def obtener_archivos():
+    """Obtener lista de archivos generados"""
+    try:
+        archivos = {}
+        for categoria in ['textos', 'flashcards', 'mocktests', 'podcasts', 'html_pages']:
+            categoria_path = os.path.join(MATERIAL_GENERADO_DIR, categoria)
+            if os.path.exists(categoria_path):
+                archivos[categoria] = [
+                    {
+                        'nombre': f,
+                        'url': f'/api/download/{categoria}/{f}',
+                        'fecha': datetime.fromtimestamp(os.path.getmtime(os.path.join(categoria_path, f))).isoformat()
+                    }
+                    for f in os.listdir(categoria_path)
+                    if os.path.isfile(os.path.join(categoria_path, f))
+                ]
+            else:
+                archivos[categoria] = []
+        return jsonify(archivos)
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 @app.route('/api/download/<path:categoria>/<path:filename>')
 def download_file(categoria, filename):

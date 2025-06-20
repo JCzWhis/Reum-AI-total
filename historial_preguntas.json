@@ -1,0 +1,910 @@
+{
+  "20250620_170916_10_Sindrome_antifosfolipido_210201b97f9080169c88e1ee6363fc05.md_20250620_170916_11_-_Miopatias_36e30a33770242b29f3dd5b74a30baa2.md_20250620_170916_1_Autoinmunidad_66d4c65e1bac47c294c2324541bceff2.md_20250620_170916_2_Autoanticuerpos_1b4201b97f9080beb360faaaffbf3c8f.md_20250620_170916_3_Compromiso_cutaneo_33f8810b85d14325906a3f0559f57ed8.md_20250620_170916_4_Enfermedades_inflamatorias_oculares_812c1d4fae2b4b1bae35b58b5434bcd9.md_20250620_170916_5_Enfermedad_pulmonar_difusa_autoinmune_1e6201b97f9080979934ff995b50bc38.md_20250620_170916_6_Enfermedades_glomerulares_y_reumatologia_c399f6bde63a4a9ab51a5bcc74666ff1.md_20250620_170916_7_Compromiso_neurologico_en_enfermedades_reumatol_1ec201b97f90800ab331d710d8c5afea.md_20250620_170916_8_Sindrome_de_Sjogren_11394bfd8e5d4be8b3f9e9cd54a23cb8.md_20250620_170916_9_Lupus_Eritematoso_sistemico_f69704d3596c4f6c86febd452485dfa2.md": [
+    {
+      "hash": "88c2d0744c56b166b2087e5e8dc7764b",
+      "pregunta": "** Un paciente de 45 años, con antecedente de artritis reumatoide seropositiva (Anti-CCP+), consulta...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "238a041e8c6b4afbdca94ec8b385fe17",
+      "pregunta": "** Una mujer de 28 años con diagnóstico de Lupus Eritematoso Sistémico (LES) presenta un episodio ag...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "f8ab372a1850e7e07b15aedb949d77eb",
+      "pregunta": "** En la patogenia de la dermatomiositis (DM), ¿cuál es el evento inmunológico inicial y más caracte...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "0ef0e7ef99c7a9ef28726d5d21f0d2c3",
+      "pregunta": "** Un paciente con esclerosis sistémica difusa presenta un rápido engrosamiento de la piel. En la fi...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "212d3573aa4c8d6132b5aeb9d4838634",
+      "pregunta": "** Un paciente con sospecha de Síndrome de Sjögren se somete a una biopsia de glándula salival menor...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "2599b62bcc7af1a361cce05bae47a748",
+      "pregunta": "** Un hombre de 25 años presenta un episodio de uveítis anterior aguda, unilateral y recurrente. El ...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "795554fef72d06e9f2d7eb2d8bee38cc",
+      "pregunta": "** Paciente de 55 años, en tratamiento con estatinas por hipercolesterolemia, desarrolla debilidad m...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "bb4c13be326fb6d2e6f61848774f6126",
+      "pregunta": "** En la patogenia de la nefritis lúpica proliferativa (Clase III/IV), el depósito de inmunocomplejo...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "f906a3b1594dab8bb6a8f9c36eebc746",
+      "pregunta": "** Una paciente con Síndrome de Sjögren primario desarrolla una neuropatía periférica caracterizada ...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "986be7f12cc12402deef1912e2b0062f",
+      "pregunta": "** En el contexto del Síndrome Antifosfolípido (SAF) obstétrico, ¿cuál es el mecanismo fisiopatológi...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "c997eae56599da66a981860f5526e17c",
+      "pregunta": "** ¿Cuál de las siguientes afirmaciones describe correctamente la diferencia fundamental en la patog...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "a1960c50510dd23cb445ebb6d197114f",
+      "pregunta": "** Un paciente con lupus cutáneo presenta lesiones eritematosas en zonas fotoexpuestas. La biopsia d...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "38d76250f3d67bf10846dc4053b0f044",
+      "pregunta": "** Durante la detección de autoanticuerpos mediante técnicas de inmunoensayo como ELISA, un resultad...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "4db851cbd2b8acb8861de1fb98002aa1",
+      "pregunta": "** ¿Cuál es la función principal del gen AIRE (Regulador Autoinmune) en el mantenimiento de la toler...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "aa4a50504ea0cd8c78ffc20e2787c944",
+      "pregunta": "** Un paciente con vasculitis asociada a ANCA presenta una glomerulonefritis rápidamente progresiva....",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "d601cc9cf0a8866d4b1727de7668f487",
+      "pregunta": "** En la esclerosis cutánea, el daño vascular inicial y la hipoxia crónica son eventos clave. ¿Cuál ...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "92ecb0fd9d262172f09a7777c0b2b34e",
+      "pregunta": "** Un paciente con Síndrome de Sjögren presenta un alto riesgo de desarrollar linfoma. ¿Cuál de los ...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "9e1331696ff75290742bd48a4f764cb7",
+      "pregunta": "** ¿Cuál es el mecanismo de acción principal del belimumab en el tratamiento del Lupus Eritematoso S...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "ed17a8aeb4e5611f99c7ff23483951ed",
+      "pregunta": "** Un paciente con dermatomiositis amiopática desarrolla úlceras cutáneas severas y una enfermedad p...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "677d6e6f556222f6c83a7f1ba4cf27d2",
+      "pregunta": "** La técnica de inmunofluorescencia indirecta (IFI) utilizando *Crithidia luciliae* como sustrato e...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "5f98a2a1c4e2461b4f6e372eb952b366",
+      "pregunta": "** En la fisiopatología de la artritis reumatoide, la citrulinización de proteínas es un evento clav...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "58c6601cbe5d9ad3e13e70bd51699fdd",
+      "pregunta": "** Una paciente con SAF catastrófico es admitida en la UCI con fallo multiorgánico y evidencia de mi...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "9f51cb3adf2e0904f7c78fb472b93e82",
+      "pregunta": "** ¿Cuál es el mecanismo de acción principal de la hidroxicloroquina que explica su utilidad en el t...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "529fe9247312578220155ae6a31f9ee8",
+      "pregunta": "** En un paciente con sarcoidosis ocular, el examen de fondo de ojo puede revelar \"snow-balls\" y \"sn...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "d18e8e6833bb4ce8abf7e8171d8ade89",
+      "pregunta": "** Un paciente presenta lesiones cutáneas que histológicamente se clasifican como paniculitis lobuli...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "153e6988d02ffba813ec9a3ee6aa8518",
+      "pregunta": "** ¿Qué característica estructural y funcional distingue a los linfocitos B-1 de los linfocitos B-2 ...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "ad7b78474a789219b12ea7bc9dd4d088",
+      "pregunta": "** La terapia con células CAR-T ha mostrado resultados prometedores en el lupus refractario. ¿Cuál e...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "0d993de37672e067dadff738836b6205",
+      "pregunta": "** Un paciente con una enfermedad autoinmune desarrolla una nefropatía glomerular con un patrón hist...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "63ac08ada799679b8a88f8a6cd2a2f51",
+      "pregunta": "** En el contexto de la autoinmunidad, el fenómeno de \"epitope spreading\" o expansión del epítopo es...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "66ea8cda833a84a80fcc5f7da7bdd67b",
+      "pregunta": "** Un paciente con miopatía por cuerpos de inclusión (MCI) muestra una debilidad muscular progresiva...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "63a0608123af5721f8d0b9800220521f",
+      "pregunta": "** La barrera hemato-retiniana interna (BRBi) es crucial para mantener el inmunoprivilegio de la ret...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "64f71d4a0c31454878f7856def8245ff",
+      "pregunta": "** Una paciente con lupus eritematoso sistémico y síndrome antifosfolípido secundario sufre un accid...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "727a00c0bbd390eacd6256d60b994e2f",
+      "pregunta": "** ¿Cuál de los siguientes patrones de dermatitis se caracteriza histológicamente por un engrosamien...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "0965b495b6cfbd2e8008dcce7408807d",
+      "pregunta": "** El anticoagulante lúpico es un test funcional que detecta un grupo heterogéneo de anticuerpos ant...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "a4bf22225915319da7f76381c4956ff0",
+      "pregunta": "** En la fisiopatología del Síndrome de Sjögren, se postula el concepto de \"epitelitis autoinmune\", ...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "d07b891f7b532b2cda165f992582d0fb",
+      "pregunta": "** Un paciente con lupus presenta una nefritis con proteinuria en rango nefrótico, pero con sediment...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "6c8cea03bed99c4a2051a5a6a5fa7531",
+      "pregunta": "** El polimorfismo en el gen PTPN22 es uno de los factores de riesgo genético no-HLA más importantes...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "30982f45d41ea03c8a1f59f666a71452",
+      "pregunta": "** ¿Qué característica diferencia fundamentalmente a los linfocitos T CD28 nulos, que se encuentran ...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "4d38744ff26e3aefa8597c8af07da618",
+      "pregunta": "** En el laboratorio, se recibe una muestra para la detección de ANA por IFI que resulta positiva co...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "3689f5bbb33896ec18761df4a05840c4",
+      "pregunta": "** Un paciente con Enfermedad de Behçet desarrolla compromiso neurológico (Neuro-Behçet). ¿Cuál es l...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "79d936a586e2619e55abf1d231c7ad71",
+      "pregunta": "** La terapia con inhibidores de puntos de control inmunitario (immune checkpoint inhibitors) para e...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "4e75bca64b5415e9e8e40b009b2abc96",
+      "pregunta": "** Una paciente de 55 años, postmenopáusica, es diagnosticada con Síndrome de Sjögren. ¿Cuál es el r...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "e3a39412456f266bf08004a4e819e7b6",
+      "pregunta": "** Un paciente con enfermedad pulmonar intersticial asociada a esclerosis sistémica es tratado con N...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "1ab86a13c04a0d8b13b99f1d13dfaa7a",
+      "pregunta": "** En el contexto del lupus eritematoso sistémico, la netosis desregulada es una fuente importante d...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    },
+    {
+      "hash": "df41562d248082f43402c8a1b1927203",
+      "pregunta": "** Un paciente con una enfermedad reumatológica presenta una mononeuritis múltiple, caracterizada po...",
+      "fecha": "2025-06-20T17:12:16.523022"
+    }
+  ],
+  "3e501c438ba36b38": [
+    {
+      "hash": "cb32effb8f38ffab1f557fa4d0b44649",
+      "pregunta": "** Un paciente de 30 años con diagnóstico reciente de lupus eritematoso sistémico (LES) presenta un ...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "c517a1477d0f2cac1f59f4e5ad9c49c5",
+      "pregunta": "** Un paciente con esclerosis sistémica presenta un patrón de neumonía intersticial no específica (N...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "eb0a13f123bb7357cdfc7406a1ac3169",
+      "pregunta": "** Una mujer de 55 años, diagnosticada con síndrome de Sjögren, presenta púrpura palpable en extremi...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "5709e31888a4b9626c55b55a57f651dd",
+      "pregunta": "** Un paciente con dermatomiositis presenta debilidad muscular proximal severa. La biopsia muscular ...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "f2e533f3314924a0763c5236ee57d095",
+      "pregunta": "** Un paciente con sospecha de lupus neuropsiquiátrico presenta un cuadro de psicosis aguda. ¿Cuál d...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "c0f170f35358f36b2a7f20159cc22059",
+      "pregunta": "** Un paciente presenta un cuadro de insuficiencia renal rápidamente progresiva. La biopsia renal mu...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "e64ad4871bc5adceb08f479b5e97c9ec",
+      "pregunta": "** En el contexto de la artritis reumatoide, el \"epítopo compartido\" se refiere a una secuencia de a...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "b8e42616e3a56b675f5d861b80191e73",
+      "pregunta": "** Un paciente con esclerosis sistémica difusa desarrolla esclerosis cutánea rápidamente progresiva....",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "e1f36d52656ac345f28b928563845347",
+      "pregunta": "** En la fisiopatología del síndrome antifosfolípido (SAF) trombótico, se postula la \"hipótesis del ...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "a4d8766621ddd6834c853f70c4d53fe4",
+      "pregunta": "** Un paciente con sospecha de enfermedad autoinmune se somete a una prueba de ANA por IFI en célula...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "09f3db3c5705aed4c401642c38ce788d",
+      "pregunta": "** Un paciente con enfermedad de Behçet desarrolla compromiso neurológico. ¿Cuál es la manifestación...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "d25aad65e8f89d9c7e886b09720e5f48",
+      "pregunta": "** ¿Cuál de las siguientes opciones describe mejor la diferencia fundamental en la patogenia de la f...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "985d61e8010d8db5c92105c591a70ed5",
+      "pregunta": "** Un paciente con polimiositis es sometido a una biopsia muscular. ¿Cuál es el hallazgo histopatoló...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "24e6ee1f02ec7f20792f98d99820b9e1",
+      "pregunta": "** Una paciente con lupus eritematoso sistémico desarrolla una nefropatía clase V (membranosa). ¿En ...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "6fef099a70291a287cf812892138e2af",
+      "pregunta": "** Un paciente con sospecha de síndrome de Sjögren se realiza una biopsia de glándula salival menor....",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "03f8003798e7c3fbf3e523814b4c06b0",
+      "pregunta": "** ¿Cuál es la función principal de la proteína Lyp, codificada por el gen PTPN22, y cómo una mutaci...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "0e3661393c95deeeb05a83963c57b6a8",
+      "pregunta": "** En un laboratorio, se realiza un test de anticoagulante lúpico. El primer paso muestra una prolon...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "a1f7557989a85010a81658683a1455df",
+      "pregunta": "** Un paciente con artritis reumatoide presenta una queratitis ulcerativa periférica (PUK). ¿Cuál es...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "70ff3aa26d38c30b0f82fb8c4575907a",
+      "pregunta": "** En la patogenia de la nefritis lúpica, ¿cuál es el papel de los anticuerpos anti-C1q?...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "51719f36cb5f780cfb18502aeea9cdf0",
+      "pregunta": "** Un paciente con síndrome de Sjögren presenta una neuropatía periférica caracterizada por ataxia s...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "6b0c03848e307eaa35fa4f7fdca64682",
+      "pregunta": "** ¿Cuál es la función del complejo proteico Mi2/NuRD y cómo se relaciona con la patogenia de la der...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "87fb8b978135acdb65f097d3027bec97",
+      "pregunta": "** Una paciente con lupus cutáneo presenta placas eritematosas y edematosas en zonas fotoexpuestas. ...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "9e1331696ff75290742bd48a4f764cb7",
+      "pregunta": "** ¿Cuál es el mecanismo de acción principal del Belimumab en el tratamiento del lupus eritematoso s...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "a0fd0f02131c5921ad550da3c63f10f5",
+      "pregunta": "** Un paciente con sarcoidosis presenta uveítis. ¿Cuál es el hallazgo oftalmológico más característi...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "4685328b61106d9f12d6d47fa36a826e",
+      "pregunta": "** Un paciente con lupus y SAF presenta un accidente cerebrovascular isquémico. Además de los mecani...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "3aa3d6ebdf5644d384a2626e3774b0fb",
+      "pregunta": "** En un laboratorio se reporta un resultado de ANA por ELISA como \"positivo\", pero el ANA por IFI e...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "369af517b78daa34a10ad5ec217ddfe6",
+      "pregunta": "** Una paciente embarazada con diagnóstico de SAF obstétrico sufre una pérdida fetal tardía. El estu...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "ba649c8e615c0413dd63bdd50c99047d",
+      "pregunta": "** Un paciente con artritis reumatoide y tabaquismo intenso desarrolla enfermedad pulmonar interstic...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "e6bcb988666076644737faa13fdd7206",
+      "pregunta": "** ¿Cuál es el papel de la célula dendrítica plasmocitoide (pDC) en la patogenia del lupus eritemato...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "d5b1a14e1d26b15c4f2c3dacef109d75",
+      "pregunta": "** Un paciente con dermatomiositis desarrolla úlceras cutáneas necróticas y una enfermedad pulmonar ...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "7de6117039ff993ba056ddca480df034",
+      "pregunta": "** Un paciente con esclerosis cutánea presenta un patrón histológico en la biopsia de piel que muest...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "e319c7a6eb8c25cfe4af5bf4b38cae48",
+      "pregunta": "** ¿Cuál es la diferencia fundamental entre la inmunidad humoral mediada por linfocitos B-2 folicula...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "d138a124fd5ba8b076d44784190a661f",
+      "pregunta": "** Un paciente con lupus en tratamiento con hidroxicloroquina presenta un brote de la enfermedad. A ...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "2f3077a8f3c0c0ecc917575e0ed80c49",
+      "pregunta": "** Un paciente con uveítis asociada a HLA-B27 presenta un episodio agudo de ojo rojo y dolor. ¿Cuál ...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "a51f1af43a071059b6d2788d102e41f9",
+      "pregunta": "** En el contexto de la patogenia de la miositis por cuerpos de inclusión (MCI), además del componen...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "80b70ac21afcc8a5e3fffe74fc403cb0",
+      "pregunta": "** Un paciente con sospecha de vasculitis ANCA presenta insuficiencia renal. La biopsia muestra necr...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "1689a47f31f1d84edb6276da612e0c78",
+      "pregunta": "** ¿Cuál es el principal mecanismo por el cual el embarazo y la progesterona pueden inducir una remi...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "a73617408fa2bdbf3d7c3c97623c8f0b",
+      "pregunta": "** Un paciente con síndrome de Sjögren presenta un \"focus score\" elevado en la biopsia de glándula s...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "2a19e1a0f02645a97fba3d9208502008",
+      "pregunta": "** En un ensayo clínico para una nueva terapia en lupus, se observa que un subgrupo de pacientes pre...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "7f14656a121c7380aeaa7f40e313a433",
+      "pregunta": "** Un paciente con una miopatía inflamatoria presenta un patrón histológico de necrosis de fibras mu...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "6e724d3b2fdda111ed0f809627cfd70b",
+      "pregunta": "** Un paciente con una enfermedad reumatológica desarrolla una paniculitis lobulillar sin vasculitis...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "5c80adebf3bb7cc563ea6ed660fd70e1",
+      "pregunta": "** Una paciente con SAF obstétrico es tratada con heparina. Además de su conocido efecto anticoagula...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "64700c1193221088a3d28c7536cd169b",
+      "pregunta": "** En un test de inmunofluorescencia indirecta (IFI), se observa que al diluir excesivamente el suer...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "a263b9241a90cdfc569978a1af8e44d9",
+      "pregunta": "** Un paciente con esclerosis sistémica y compromiso pulmonar intersticial es evaluado con pruebas d...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    },
+    {
+      "hash": "ac24b6cb7ce05cac2adfabe608d18136",
+      "pregunta": "** La barrera hemato-retiniana interna (BRBi) es crucial para mantener el inmunoprivilegio de la ret...",
+      "fecha": "2025-06-20T17:24:30.122192"
+    }
+  ],
+  "832514d98c033ea1": [
+    {
+      "hash": "c52b220b6b73a3e11e1db5dbfbb22a12",
+      "pregunta": "** Un paciente de 45 años presenta debilidad muscular progresiva y un rash heliotropo. La biopsia mu...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "150fa3522cb0957c7bb644a94fcb5e09",
+      "pregunta": "** ¿Cuál es la diferencia fundamental entre la autoinmunidad y la autoinflamación?...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "7ffe15533867e4d242542eb76683ee3f",
+      "pregunta": "** Una paciente de 35 años con Lupus Eritematoso Sistémico (LES) presenta un cuadro de psicosis agud...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "9f11471f271be8b98bb10efddc6a50db",
+      "pregunta": "** ¿Cuál es el mecanismo principal por el cual la hidroxicloroquina ejerce su efecto inmunomodulador...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "ece3c98568bd2ef2d5b450c78cdaf05f",
+      "pregunta": "** Un paciente con artritis reumatoide y tabaquismo crónico desarrolla enfermedad pulmonar interstic...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "7e3f717faec1e218a8f09186a133ad24",
+      "pregunta": "** Un laboratorio reporta un resultado de ANA por IFI con un patrón citoplasmático reticular/mitocon...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "fdf64f66c9d2c484c994715724fa6cdb",
+      "pregunta": "** En la fisiopatología del Síndrome de Sjögren, ¿cuál es el rol principal de la citoquina BAFF (BLy...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "997f0738acd4e3497904a0851f7e1421",
+      "pregunta": "** Un paciente con esclerosis sistémica difusa presenta un rápido engrosamiento de la piel y se encu...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "786da92372791dba9747f9f21df9afda",
+      "pregunta": "** En el contexto de la nefritis lúpica, ¿en qué localización glomerular se depositan predominanteme...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "61cec8f2c34614055fc81722394a4986",
+      "pregunta": "** Un paciente con Síndrome de Sjögren primario desarrolla un cuadro neurológico caracterizado por a...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "f4677d10af1afbdb13baa25f373bc073",
+      "pregunta": "** ¿Cuál es el mecanismo principal por el cual la progesterona durante el embarazo puede inducir una...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "63b86785e30e571a5376d49c9ae3b978",
+      "pregunta": "** Un paciente con sospecha de vasculitis ANCA presenta insuficiencia renal rápidamente progresiva. ...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "b51af5f24c4b0d900343f980c4770ec9",
+      "pregunta": "** En la fisiopatología del síndrome antifosfolípido (SAF) trombótico, ¿cuál es el papel de la \"hipó...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "cc07934ef98b33e960681c89cd4a9b13",
+      "pregunta": "** ¿Cuál de las siguientes afirmaciones describe mejor el mecanismo de \"epitope spreading\" (expansió...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "0d46a1e893f89245d25e7a9cc9232e29",
+      "pregunta": "** Un paciente con diagnóstico de artritis reumatoide seropositiva (FR+ y anti-CCP+) es portador de ...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "7d9ac2538973886c8761de218918c009",
+      "pregunta": "** Un paciente presenta lesiones cutáneas de tipo placas eritematosas y edematosas en zonas fotoexpu...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "f60e98426e83e81959f82057cb7fe5aa",
+      "pregunta": "** Un paciente con enfermedad de Behçet desarrolla compromiso neurológico. ¿Cuál es la manifestación...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "b965946b20edbebdfd03d1844d351090",
+      "pregunta": "** ¿Cuál es la función del gen AIRE en el mantenimiento de la tolerancia inmunológica?...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "af0059f9ac144d19f36e1a25086b9007",
+      "pregunta": "** En la patogenia de la enfermedad pulmonar intersticial (EPI) asociada a enfermedades del tejido c...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "d79433b6106e05ba362f5e3689762463",
+      "pregunta": "** Una paciente de 30 años con SAF obstétrico presenta pérdidas fetales recurrentes. La histología d...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "5bf964c5ff3eb1c82ef54a83ed3c0f74",
+      "pregunta": "** Un paciente con esclerosis sistémica desarrolla queratitis ulcerativa periférica (PUK). ¿Cuál es ...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "e645900fd435c64bb32deb814a24b3da",
+      "pregunta": "** ¿Qué es el \"idiotipo\" de un anticuerpo?...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "404a60f9f870ad4135f8cc1b020df3f4",
+      "pregunta": "** Un paciente con lupus cutáneo presenta lesiones que en la biopsia muestran un patrón de dermatiti...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "81c43b0826fa669a8c878f24f08f415a",
+      "pregunta": "** En un paciente con lupus, se detectan glóbulos rojos que retienen sus mitocondrias en la circulac...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "7577d84cdb6a0ef87a1e268f36743610",
+      "pregunta": "** Un paciente presenta una miopatía inflamatoria con debilidad muscular severa y necrosis extensa e...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "30d3936f21e83c1f5ef82163d01e8dd3",
+      "pregunta": "** ¿Cuál es el mecanismo de acción de Nintedanib como agente antifibrótico en la enfermedad pulmonar...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "ce6b10d7965d4977caffa4f75cd1356f",
+      "pregunta": "** Un paciente con lupus eritematoso sistémico desarrolla nefritis. La biopsia renal muestra un patr...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "b4d005ff4bcc168cbbcf6c18e7e314b8",
+      "pregunta": "** ¿Cuál es la función de la proteína XIST y cómo se relaciona con la mayor prevalencia de lupus en ...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "7ded72ef7d88e12d61ff6399c574cbfb",
+      "pregunta": "** En un paciente con sospecha de paniculitis, la biopsia muestra un infiltrado inflamatorio predomi...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "958d00c69e2b52cd6bfe03401e66d83b",
+      "pregunta": "** ¿Cuál es el mecanismo de acción de la terapia CAR-T dirigida a CD19 en el tratamiento del lupus r...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "10c6ac4e260a394cb4b41bee2b8b6e43",
+      "pregunta": "** Un paciente con Síndrome de Sjögren presenta púrpura palpable en extremidades inferiores. El labo...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "9ca80eae23b46fd9882e66cd5d7c5d9a",
+      "pregunta": "** ¿Cuál es la principal diferencia funcional entre los linfocitos B-1 y los linfocitos B-2 folicula...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "f3e3ea52553dd5ebcdb4562f5b4431ca",
+      "pregunta": "** Un paciente desarrolla una miopatía inflamatoria con un fenotipo de dermatomiositis con úlceras c...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "69656a6aed0bd78ae0236226814999cd",
+      "pregunta": "** En el contexto de las enfermedades inflamatorias oculares, ¿qué es la \"Desviación Inmune Asociada...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "4eccac039408b0f3c500b0f805ad0478",
+      "pregunta": "** ¿Cuál de los siguientes es un criterio MAYOR para definir una enfermedad como autoinmune, según l...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "cf6c2b97ac79c8af81a1d95fa38c5792",
+      "pregunta": "** En la patogenia del lupus, la vía del interferón tipo I es central. ¿Cuál es la célula considerad...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "0f8ac4f32aac3297207937ab326d7c10",
+      "pregunta": "** Un paciente con artritis reumatoide presenta una mononeuritis múltiple. ¿Cuál es el mecanismo fis...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "fb2eb23f65f44b38f7e9e6dd088f19ef",
+      "pregunta": "** ¿Cuál es la función de la proteína Lyp, codificada por el gen PTPN22, y cómo una mutación en este...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "65c0ff96f80beec289059f9d902d5a41",
+      "pregunta": "** En la patogenia de la vasculopatía crónica del SAF, ¿qué vía de señalización celular se ha implic...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "27b618674bee7a79813efb744bc97aa4",
+      "pregunta": "** Un paciente con sarcoidosis presenta uveítis. ¿Cuál de los siguientes hallazgos clínicos y genéti...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "6347ae4f5911aa98c8443908984eb36f",
+      "pregunta": "** ¿Cuál de las siguientes afirmaciones describe correctamente el efecto de la acetilación de histon...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "cdd35661f3e24f55062fbf56a12f8e40",
+      "pregunta": "** Una paciente de 55 años, postmenopáusica, es diagnosticada con Síndrome de Sjögren. ¿Cuál es el r...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "6628791647bd277c0a30b74002e7eead",
+      "pregunta": "** En la técnica de inmunofluorescencia indirecta (IFI) para la detección de anticuerpos antinuclear...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "f8fd83218a2a962d120175a29d97ff3e",
+      "pregunta": "** Un paciente con lupus presenta una biopsia renal que muestra más de 100 núcleos por glomérulo y d...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    },
+    {
+      "hash": "95f0d498850919ff42cbd972b7b1d848",
+      "pregunta": "** En el contexto de las enfermedades inflamatorias oculares, ¿cuál es la función de la barrera hema...",
+      "fecha": "2025-06-20T17:25:21.964500"
+    }
+  ],
+  "0407be3f41d28479": [
+    {
+      "hash": "a7843fa652028d97039ed32c50b4456b",
+      "pregunta": "** Una paciente de 55 años, diagnosticada con Síndrome de Sjögren, consulta por un cuadro de 6 meses...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "ce91c5579ef3a36f6ff9ec06504363a8",
+      "pregunta": "** Un niño de 4 años es diagnosticado con lupus eritematoso sistémico (LES) monogénico. Presenta un ...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "0552ede519af69adb640a7cd1044544d",
+      "pregunta": "** En la patogenia de la dermatomiositis, ¿cuál es el evento inmunológico inicial y más característi...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "2d662d1efd80ff0f5f32567494a4678d",
+      "pregunta": "** Un paciente con artritis reumatoide y tabaquismo crónico desarrolla enfermedad pulmonar interstic...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "67f94cb90693db5de0e3f40750fe2892",
+      "pregunta": "** Paciente de 25 años con diagnóstico de LES presenta proteinuria en rango nefrótico, edema e hipoa...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "03f8003798e7c3fbf3e523814b4c06b0",
+      "pregunta": "** ¿Cuál es la función principal de la proteína Lyp, codificada por el gen PTPN22, y cómo una mutaci...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "bdaa2e9a44488b44ea226a8fc025622e",
+      "pregunta": "** Un paciente con esclerosis sistémica difusa presenta un rápido engrosamiento cutáneo y desarrolla...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "5ce2c988dfbd2b39a59fbbf53eb00bfb",
+      "pregunta": "** En el contexto del síndrome antifosfolípido (SAF) obstétrico, ¿cuál es el mecanismo patogénico pr...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "5a920a74974ac0c858c521a258ad10f5",
+      "pregunta": "** ¿Cuál es la función del sistema glifático en el sistema nervioso central y qué implicancia tiene ...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "8664411dca5c51ace3f0b992be05434c",
+      "pregunta": "** Un paciente con uveítis anterior aguda, recurrente, unilateral y alternante, presenta una fuerte ...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "bb00aec4530915f99c7916d56a9d6a3b",
+      "pregunta": "** En la fisiopatología del Síndrome de Sjögren, se describe el concepto de \"epitelitis autoinmune\"....",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "74a3430d43f80ddeb2066ef64b9992e0",
+      "pregunta": "** Un paciente con lupus eritematoso sistémico desarrolla un cuadro psiquiátrico agudo (psicosis). ¿...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "5c5837014de995e808b7f09c3202ebe1",
+      "pregunta": "** En la patogenia de la esclerosis cutánea, la hipoxia tisular juega un rol central. ¿Cuál es el de...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "c896f62152c4676f818bb4f8cf8c41af",
+      "pregunta": "** ¿Cuál de las siguientes técnicas de laboratorio es considerada el \"gold standard\" para la detecci...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "b66901a73b4f067051c9885a6195e33b",
+      "pregunta": "** Un paciente con vasculitis ANCA-MPO presenta una glomerulonefritis rápidamente progresiva. La bio...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "96f3ef758a8cf85a889a827154f18ad8",
+      "pregunta": "** ¿Qué es el \"epitope spreading\" o expansión del epítopo en el contexto de una enfermedad autoinmun...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "aa84ad55b79946b241380a39753a9562",
+      "pregunta": "** En un paciente con dermatomiositis asociada a cáncer, ¿cuál de los siguientes autoanticuerpos con...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "b41e4e58d61ba06ea61968704e593d2a",
+      "pregunta": "** Un paciente con lupus cutáneo presenta lesiones eritematosas en zonas fotoexpuestas. A nivel hist...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "c74d159c231406903ffdaa5648ae12ec",
+      "pregunta": "** ¿Cuál es la función del complejo de proteínas RAG1/2 en el desarrollo de la diversidad del repert...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "f100f192d1ca441f11123069cebb4d91",
+      "pregunta": "** Una paciente con Síndrome de Sjögren presenta anticuerpos anti-Ro positivos. ¿Cuál es el mecanism...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "b2cdaf4b997d0aa23b39aa797ba3794b",
+      "pregunta": "** En un paciente con artritis reumatoide, la presencia del \"epítopo compartido\" en ciertos alelos H...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "c7b52f8a5123700358cc027c2b4a7a3f",
+      "pregunta": "** Un paciente con lupus neuropsiquiátrico presenta deterioro cognitivo y afectivo. Se postula que l...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "defe19dc3c33d86029bf86e0853ee14c",
+      "pregunta": "** ¿Cuál de las siguientes opciones describe correctamente la diferencia fundamental entre la barrer...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "87c0c29050fdc851ff27b374a58bba13",
+      "pregunta": "** En un paciente con enfermedad de Behçet que desarrolla compromiso neurológico (Neuro-Behçet), ¿cu...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "2eed03d0310ae2399cbd9b7c6d27f46f",
+      "pregunta": "** Un paciente con una enfermedad autoinmune presenta una biopsia de piel que muestra un patrón de d...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "d89ac075dcee1d593e744ce36bf2d2ce",
+      "pregunta": "** ¿Cuál es el mecanismo de acción de Belimumab en el tratamiento del lupus eritematoso sistémico?...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "ce9e6e1adf8de3b5b1623fb4dae81647",
+      "pregunta": "** Un paciente con miopatía inflamatoria presenta un cuadro clínico de debilidad muscular proximal s...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "45ff743e48ebe9f5a3b447b2a67c4ec3",
+      "pregunta": "** En el contexto de la autoinmunidad, ¿cuál es el papel de los microARN (miARN)?...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "9a3f8bc12227886a354f55086595d90f",
+      "pregunta": "** Un paciente presenta un cuadro clínico de púrpura palpable en extremidades inferiores, artralgias...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "a8942b270ee770fec12decf425c0d6af",
+      "pregunta": "** ¿Cuál es la función del anticuerpo monoclonal Rituximab y por qué su efecto no elimina las célula...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "87b24f05b624db39778810d78e5d5bb2",
+      "pregunta": "** En la fisiopatología de la fibrosis pulmonar, independientemente de la causa inicial, varias vías...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "7ba978b97c0be68fae68c587f0bdeda8",
+      "pregunta": "** Una paciente con diagnóstico de lupus presenta un VDRL falsamente positivo. ¿Qué anticuerpo antif...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "7086e709708afa69993beddc7da51c24",
+      "pregunta": "** ¿Cuál de los siguientes hallazgos en la biopsia de glándula salival menor de un paciente con Sínd...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "57ca308fa0134e6dc2ca639706cb7417",
+      "pregunta": "** En un paciente con polimiositis, la biopsia muscular muestra un infiltrado inflamatorio endomisia...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "93fd2876894678e53ccc3459f037ccf4",
+      "pregunta": "** ¿Cuál es la diferencia fundamental entre un epítopo lineal y un epítopo conformacional en un auto...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "577090fa56370335cb2f9a3850e41da7",
+      "pregunta": "** En la sarcoidosis ocular, es característico encontrar una uveítis granulomatosa. ¿Qué tipo de res...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "a4c21fff4bb5d8173004a3a7a07729dc",
+      "pregunta": "** Un paciente con lupus es tratado con hidroxicloroquina. ¿Cuál es uno de los mecanismos de acción ...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "227103b5964f4cffbdfe8e4474991d62",
+      "pregunta": "** En el contexto de la autoinmunidad, la inactivación del cromosoma X en mujeres es un mecanismo re...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "b8e3f0557f8e13310d38b01779d65605",
+      "pregunta": "** Un paciente con sospecha de SAF trombótico tiene un TTPK prolongado que no corrige al mezclar con...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "a257a5cd258fe7b852157bb7af1fd7ae",
+      "pregunta": "** ¿Cuál es la función del factor de transcripción FoxP3?...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "ddb746c64378a728c72502966a78ec6b",
+      "pregunta": "** La terapia con células CAR-T ha mostrado resultados prometedores en el lupus refractario. ¿Cuál e...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "705783b331c5b5197f87813f8770f103",
+      "pregunta": "** En la fisiopatología de la paniculitis lobulillar sin vasculitis, como la observada en el lupus p...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "84730438461320f18c55e60dc4044d25",
+      "pregunta": "** ¿Qué característica estructural diferencia a las inmunoglobulinas IgM e IgE de las IgG, IgA e IgD...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "f2c1a50e428e63999ad67f21332d5af0",
+      "pregunta": "** Un paciente con síndrome de Sjögren presenta anticuerpos anti-Ro52 positivos. ¿Cuál es la función...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    },
+    {
+      "hash": "6517ff6200f647232fc1598e5ad429e8",
+      "pregunta": "** Un paciente con esclerosis sistémica es tratado con Nintedanib para su enfermedad pulmonar inters...",
+      "fecha": "2025-06-20T18:33:22.171227"
+    }
+  ]
+}
